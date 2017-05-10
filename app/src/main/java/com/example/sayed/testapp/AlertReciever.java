@@ -11,7 +11,7 @@ import android.support.v7.app.NotificationCompat;
 public class AlertReciever extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        createNotification(context , "Times Up" , "5 sec has passed" , "Alert");
+        createNotification(context , "Times Up" , "Time has passed!" , "Alert");
 
     }
     public void createNotification(Context context , String msg , String msgText , String msgAlert){
