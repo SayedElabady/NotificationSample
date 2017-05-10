@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestAPP</string>
+    <string name="title_activity_more_info_notification">MoreInfoNotification</string>
+</resources>
