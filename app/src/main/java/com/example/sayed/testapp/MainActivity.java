@@ -14,9 +14,13 @@ import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     Button setNotificationButt , stopNotificationButt , setAlarmButt;
+    EditText editText;
     NotificationManager notificationManager;
     int notifyID = 33;
     boolean isNotifyActive = false;
@@ -27,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         setAlarmButt = (Button) findViewById(R.id.Alarmmein5Secs);
         setNotificationButt = (Button) findViewById(R.id.showNotifications);
         stopNotificationButt = (Button) findViewById(R.id.hideNotifications);
+        editText = (EditText) findViewById(R.id.minEditText);
+        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus)
+                    editText.setText("");
+                else
+                    editText.setHint("Write the minutes to Alert");
+            }
+        });
 
 
     }
@@ -62,7 +75,12 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void setAlarm(View view) {
-        long alarmWait = new GregorianCalendar().getTimeInMillis()+5*1000;
+
+        Calendar c = Calendar.getInstance();
+        int Minutes = c.get(Calendar.MINUTE);
+        String toAlertStr = editText.getText().toString();
+        int toAlertMin = Integer.parseInt(toAlertStr);
+        long alarmWait = Minutes + toAlertMin;
 
         Intent alertIntent = new Intent(this , AlertReciever.class);
 

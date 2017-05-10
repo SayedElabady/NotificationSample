@@ -14,7 +14,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="159dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
     <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -27,11 +31,19 @@
         android:id="@+id/hideNotifications"
         android:text="Hide Notifiaction"
         android:onClick="hideNotification"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write the number of minutes to alert "
+            android:id="@+id/minEditText"
+            android:inputType="number"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Alarmmein5Secs"
-        android:text="Alarm Notifiaction"
+        android:text="SetAlaram"
         android:onClick="setAlarm"/>
+
+
     </LinearLayout>
 </RelativeLayout>

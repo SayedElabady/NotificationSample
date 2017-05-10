@@ -7,9 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.NotificationCompat;
 
-/**
- * Created by Sayed on 5/9/2017.
- */
 
 public class AlertReciever extends BroadcastReceiver {
     @Override
