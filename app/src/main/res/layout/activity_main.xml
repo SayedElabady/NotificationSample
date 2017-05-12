@@ -43,7 +43,11 @@
         android:id="@+id/Alarmmein5Secs"
         android:text="SetAlaram"
         android:onClick="setAlarm"/>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Schedule an Alarm!"
+        android:id="@+id/mText"/>
 
     </LinearLayout>
 </RelativeLayout>

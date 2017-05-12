@@ -26,7 +26,7 @@ public class AlertReciever extends BroadcastReceiver {
 
         notificationBuilder.setContentIntent(pendingIntent);
 
-        notificationBuilder.setDefaults(NotificationCompat.DEFAULT_SOUND);
+        notificationBuilder.setDefaults(NotificationCompat.DEFAULT_VIBRATE);
 
         notificationBuilder.setAutoCancel(true);
 
